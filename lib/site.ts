@@ -18,5 +18,6 @@ export const navLinks = [
   { label: "Serviços", href: "#servicos" },
   { label: "Quem Atendemos", href: "#quem-atendemos" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Experiência Técnica", href: "#experiencia-tecnica" },
   { label: "Contato", href: "#contato" },
 ]

@@ -35,14 +35,12 @@ export function About() {
             Conhecimento Técnico Aplicado a Soluções Reais
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Sou químico e atuo na área de tratamento de água, oferecendo soluções
-            técnicas para empresas, indústrias, condomínios e diferentes sistemas
-            de tratamento. Através da PARA VIDA TODA, trabalho com Responsabilidade
-            Técnica, projetos, dimensionamento, instalação, manutenção e consultoria,
-            buscando atender às necessidades específicas de cada cliente. Meu objetivo
-            é oferecer soluções eficientes, acompanhamento técnico e orientação
-            especializada, contribuindo para o bom funcionamento dos sistemas de
-            tratamento de água. Atendo Santa Catarina, Paraná e Rio Grande do Sul.
+            Sou químico com experiência prática em tratamento de água para diferentes
+            setores, incluindo as indústrias farmacêutica e alimentícia. Desenvolvo e
+            acompanho soluções de ponta a ponta — do projeto e dimensionamento à
+            instalação, operação e manutenção — com foco em segurança, eficiência e
+            nas necessidades de cada sistema. Atendo Santa Catarina, Paraná e Rio
+            Grande do Sul.
           </p>
 
           <ul className="mt-8 space-y-3">
