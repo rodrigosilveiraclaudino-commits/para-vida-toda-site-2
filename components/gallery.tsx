@@ -1,76 +1,78 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 import { SectionHeading } from "@/components/section-heading"
 
-type Category = "Todos" | "ETA" | "Bombas" | "Tubulações" | "Reservatórios" | "Instalações"
-
-const filters: Category[] = ["Todos", "ETA", "Bombas", "Tubulações", "Reservatórios", "Instalações"]
-
-const projects: { src: string; alt: string; category: Exclude<Category, "Todos"> }[] = [
-  { src: "/images/project-eta.png", alt: "Estação de tratamento de água (ETA)", category: "ETA" },
-  { src: "/images/project-pumps.png", alt: "Sistema de bombas de água", category: "Bombas" },
-  { src: "/images/project-piping.png", alt: "Sistema de tubulações industriais", category: "Tubulações" },
-  { src: "/images/project-reservoir.png", alt: "Reservatórios de armazenamento de água", category: "Reservatórios" },
-  { src: "/images/project-installation.png", alt: "Instalação de sistema de tratamento", category: "Instalações" },
-  { src: "/images/project-filtration.png", alt: "Unidades de filtração por membrana", category: "Instalações" },
+const solutions = [
+  {
+    title: "Osmose reversa",
+    description: "Projetos, dimensionamento, operação e manutenção.",
+    src: "/images/project-filtration.png",
+    alt: "Sistema industrial de osmose reversa com membranas e tubulações",
+  },
+  {
+    title: "Sistemas de filtração",
+    description: "Filtros de areia e pré-tratamento.",
+    src: "/images/project-eta.png",
+    alt: "Filtros industriais de areia em uma instalação de tratamento de água",
+  },
+  {
+    title: "Cloração automática",
+    description: "Sistemas de dosagem e controle de cloro.",
+    src: "/images/project-piping.png",
+    alt: "Sistema automático de dosagem química para tratamento de água",
+  },
+  {
+    title: "Abrandadores",
+    description: "Resinas de troca iônica e regeneração automática.",
+    src: "/images/project-reservoir.png",
+    alt: "Abrandadores industriais com vasos de resina e reservatórios de água",
+  },
+  {
+    title: "Carvão ativado",
+    description: "Projetos e sistemas de filtração.",
+    src: "/images/project-installation.png",
+    alt: "Filtros industriais de carvão ativado em uma estação de tratamento",
+  },
+  {
+    title: "Manutenção e automação",
+    description: "Bombas, motores, comandos e controles.",
+    src: "/images/project-pumps.png",
+    alt: "Técnica realizando manutenção em bomba e motor de tratamento de água",
+  },
 ]
 
 export function Gallery() {
-  const [active, setActive] = useState<Category>("Todos")
-
-  const filtered =
-    active === "Todos" ? projects : projects.filter((p) => p.category === active)
-
   return (
     <section className="scroll-mt-24 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Portfólio"
-          title="Galeria de Projetos"
-          description="Veja exemplos ilustrativos de sistemas, equipamentos e instalações de tratamento de água."
+          eyebrow="Experiência profissional"
+          title="Nossas Soluções em Tratamento de Água"
         />
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2.5">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              onClick={() => setActive(filter)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
-                active === filter
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "border border-border bg-background text-foreground/70 hover:border-primary/40 hover:text-primary"
-              }`}
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {solutions.map((solution) => (
+            <article
+              key={solution.title}
+              className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
             >
-              {filter}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((project) => (
-            <div
-              key={project.src}
-              className="group relative overflow-hidden rounded-2xl border border-border"
-            >
-              <Image
-                src={project.src || "/placeholder.svg"}
-                alt={project.alt}
-                width={500}
-                height={375}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-0 flex items-end bg-gradient-to-t from-brand-dark/80 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div>
-                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
-                    {project.category}
-                  </span>
-                  <p className="mt-2 text-sm font-medium text-primary-foreground">{project.alt}</p>
-                </div>
+              <div className="overflow-hidden">
+                <Image
+                  src={solution.src}
+                  alt={solution.alt}
+                  width={1200}
+                  height={900}
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-            </div>
+              <div className="p-6">
+                <h3 className="font-heading text-lg font-semibold text-brand-dark">
+                  {solution.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {solution.description}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
       </div>

@@ -7,6 +7,7 @@ import { WhyUs } from "@/components/why-us"
 import { Process } from "@/components/process"
 import { Gallery } from "@/components/gallery"
 import { About } from "@/components/about"
+import { TechnicalExperience } from "@/components/technical-experience"
 import { Faq } from "@/components/faq"
 import { Cta } from "@/components/cta"
 import { Footer } from "@/components/footer"
@@ -25,6 +26,7 @@ export default function Page() {
         <Process />
         <Gallery />
         <About />
+        <TechnicalExperience />
         <Faq />
         <Cta />
       </main>
