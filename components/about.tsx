@@ -34,14 +34,32 @@ export function About() {
           <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-balance text-brand-dark md:text-4xl">
             Conhecimento Técnico Aplicado a Soluções Reais
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Sou químico com experiência prática em tratamento de água para diferentes
-            setores, incluindo as indústrias farmacêutica e alimentícia. Desenvolvo e
-            acompanho soluções de ponta a ponta — do projeto e dimensionamento à
-            instalação, operação e manutenção — com foco em segurança, eficiência e
-            nas necessidades de cada sistema. Atendo Santa Catarina, Paraná e Rio
-            Grande do Sul.
-          </p>
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+            <p>
+              Sou químico e possuo experiência prática na área de tratamento de água,
+              atuando em diferentes setores, incluindo as indústrias farmacêutica e
+              alimentícia. Ao longo de 15 anos, trabalhei com sistemas de osmose
+              reversa, envolvendo operação, manutenção, projetos e dimensionamento.
+            </p>
+            <p>
+              Também possuo experiência no desenvolvimento, dimensionamento, montagem
+              e manutenção de sistemas de filtração, abrandamento, carvão ativado,
+              pré-tratamento, cloração, manutenção mecânica, elétrica e automação.
+            </p>
+            <p>
+              Através da <strong className="font-semibold text-foreground">PARA VIDA TODA</strong>, ofereço soluções técnicas que vão do projeto e
+              dimensionamento à instalação, operação e manutenção, sempre considerando
+              as necessidades de cada sistema e cliente.
+            </p>
+            <p>
+              <strong className="font-semibold text-foreground">
+                Localizada na região Sul do Brasil, a PARA VIDA TODA atende empresas e
+                indústrias em todo o território nacional
+              </strong>
+              , com atendimento presencial conforme a região e o serviço contratado,
+              além de consultoria e suporte técnico.
+            </p>
+          </div>
 
           <ul className="mt-8 space-y-3">
             {highlights.map(({ icon: Icon, label }) => (
