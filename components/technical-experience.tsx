@@ -33,7 +33,7 @@ const expertise = [
     icon: Activity,
     title: "Cloração automática",
     description:
-      "Projeto e instalação de sistemas automáticos de cloração com bombas dosadoras.",
+      "Experiência em projeto, dimensionamento, montagem, instalação e manutenção de sistemas automáticos de cloração com bombas dosadoras automáticas.",
   },
   {
     icon: FlaskConical,
@@ -51,7 +51,7 @@ const expertise = [
     icon: Cog,
     title: "Manutenção de equipamentos",
     description:
-      "Manutenção mecânica de bombas e manutenção elétrica de equipamentos de tratamento.",
+      "Manutenção mecânica de bombas e manutenção elétrica de equipamentos e sistemas de tratamento de água.",
   },
   {
     icon: Cable,
